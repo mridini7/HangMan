@@ -1,0 +1,32 @@
+mport random
+wordList = ["mother", "father", "brother", "sister"]
+
+word_to_guess = random.choice(wordList)
+#print(word_to_guess)
+
+word_to_display = len(word_to_guess) * '_'
+word_to_display_as_list = list(word_to_display)
+#print(word_to_display)
+
+max_num_of_attempts = 15
+
+def process_letter(guess):
+    pos = word_to_guess.find(guess)
+    if pos < 0:
+        print("Sorry your letter was not found. Keep on trying!")
+    else:
+        word_to_display_as_list
+        word_to_display[pos] = guess
+
+while True:
+    print("Guess this word: " + word_to_display)
+    guess_letter = input("Enter one letter: ")
+    process_letter(guess_letter)
+    if word_to_guess == word_to_display:
+        print("You did it!")
+        quit(0)
+    else:
+        max_num_of_attempts == max_num_of_attempts - 1
+        if max_num_of_attempts <= 0:
+            print("Sorry you lost, Play again next time!")
+            quit(0)
