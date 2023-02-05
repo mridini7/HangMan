@@ -1,4 +1,4 @@
-mport random
+import random
 wordList = ["mother", "father", "brother", "sister"]
 
 word_to_guess = random.choice(wordList)
